@@ -1,0 +1,50 @@
+spring:
+  application:
+     name: authentication-service
+  security:
+    user:
+      name: akash
+      password: aka1sh
+
+  # Database configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth_service_db
+    username: root
+    password: aka1sh
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+
+
+  # Redis cache configuration
+  cache:
+    type: redis
+    host: localhost
+    port: 6379
+    redis:
+      time-to-live: 60000
+    
+# JWT Configuration
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 900000  # 15 minutes
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
