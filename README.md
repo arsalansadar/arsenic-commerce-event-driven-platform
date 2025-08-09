@@ -23,7 +23,8 @@ Instructions on how to set up, run, and test each microservice independently can
 ## Technologies Used
 
 - Java 8+ / Spring Boot 3.x  
-- Spring Cloud Netflix Eureka & Gateway  
+- Spring Cloud Netflix Eureka & Gateway
+- MySQL
 - MongoDB Atlas  
 - RabbitMQ  
 - JWT Authentication  
